@@ -1,0 +1,46 @@
+<div class="espacio">
+<div class="container">
+  <div class="row espacio2">
+    <div class="card card1">
+      <div class="card-body cambio">
+        <table class="table table-striped center1">
+          <thead>
+            <th>#</th>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>tipo documento</th>
+            <th>documento</th>
+            <th>lugar nacimiento</th>
+            <th>fecha nacimiento</th>
+            <th>email</th>
+            <th>telefono</th>
+            <th>lu_residencia</th>
+            <th>Sexo</th>
+            <th>Editar</th>
+            <th>Borrar</th>
+          </thead>
+          <tbody>
+            
+            <tr *ngFor="let user of usuarios">
+              <td>{{ user.id }}</td>
+              <td>{{ user.nombre }}</td>
+              <td>{{ user.apellido }}</td>
+              <td>{{ user.tipo_documento }}</td>
+              <td>{{ user.documento }}</td>
+              <td>{{ user.lugar_na }}</td>
+              <td>{{ user.fecha_na }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.telefono }}</td>
+              <td>{{ user.lu_residencia }}</td>
+              <td>{{ user.sexo }}</td>
+              <td><a (click)="editarUsuario(user.id)" class="btn btn-warning">Editar</a></td>
+              <td><button (click)="eliminar(user.id)" class="btn btn-danger">Borrar</button></td>
+              
+            </tr>
+          </tbody>
+        </table>
+        <button type="submit" (click)='nuevoUsuario()' class="btn btn-success salto">Nuevo</button>
+      </div>
+    </div>
+  </div>
+</div>

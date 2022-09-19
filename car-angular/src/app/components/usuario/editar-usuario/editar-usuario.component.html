@@ -1,0 +1,101 @@
+<div class="espacio">
+    <div class="card">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://www.themoviedb.org/t/p/original/jsg6n5qSCQ30KfrZd4H3WExIyiV.jpg" class="img-fluid rounded-start">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+                <div class="container">
+                    <form [formGroup]="editarform" class="row g-3" (ngSubmit)="putform(editarform.value)">
+                    <p class="estilo">Editar Persona</p>
+                        <div class="col-md-4">
+                          <label for="nombre" class="form-label">Nombre</label>
+                          <input type="text" class="form-control" id="nombre" formControlName="nombre">
+                        </div>
+            
+                        <div class="col-md-4">
+                          <label for="apellido" class="form-label">Apellido</label>
+                          <input type="text" class="form-control" id="apellido" formControlName="apellido">
+                        </div>
+
+                        <div class="col-md-4">
+                          <label for="tipo_documento" class="form-label">Seleccione Tipo documento</label>
+                          <select class="form-select" aria-label="Default select example" type="text" id="tipo_documento" formControlName="tipo_documento">
+                            <option value=1>CC</option>
+                            <option value=2>TI</option>
+                            <option value=3>TP</option>
+                            <option value=4>RC</option>
+                            <option value=5>CE</option>
+                            <option value=6>DNI</option>
+                          </select>
+                        </div>
+
+                        <div class="col-md-4">
+                          <label for="documento" class="form-label">Documento</label>
+                          <input type="text" class="form-control" id="documento" formControlName="documento">
+                        </div>
+            
+                        <div class="col-md-4">
+                          <label for="lugar_na" class="form-label">Lugar de nacimiento</label>
+                          <input type="text" class="form-control" id="lugar_na" formControlName="lugar_na">
+                        </div>
+
+                        <div class="col-md-4">
+                          <label for="fecha_na" class="form-label">Fecha de Nacimiento</label>
+                          <input type="text" class="form-control" id="fecha_na" formControlName="fecha_na">
+                        </div>
+            
+                        
+                        <div class="col-md-4">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="email" formControlName="email">
+                        </div>
+            
+                        <div class="col-md-4">
+                            <label for="telefono" class="form-label">Telefono</label>
+                            <input type="number" class="form-control" id="telefono" formControlName="telefono">
+                        </div>
+
+                        <div class="col-md-4">
+                          <label for="lu_residencia" class="form-label">Lugar de Residencia</label>
+                          <select class="form-select" aria-label="Default select example" type="text" id="lu_residencia" formControlName="lu_residencia">
+                            <option value=1>Bucaramanga</option>
+                            <option value=2>Bogota</option>
+                            <option value=3>Medellin</option>
+                            <option value=4>Cali</option>
+                            <option value=5>Popayan</option>
+                            <option value=6>Pasto</option>
+                            <option value=7>Manizales</option>
+                            <option value=8>Pereira</option>
+                            <option value=9>Armenia</option>
+                            <option value=10>Valledupar</option>
+                            <option value=11>Yopal</option>
+                            <option value=12>Cartagena</option>
+                            <option value=13>Barranquilla</option>
+                            <option value=14>Santa Marta</option>
+                            <option value=15>Rioacha</option>
+                            <option value=16>San Andres</option>
+                            <option value=17>Cucuta</option>
+                            <option value=18>Ibague</option>
+                            <option value=17>Villavicencio</option>
+                            <option value=18>Floridablanca</option>
+                          </select>
+                        </div>
+
+                        <div class="col-md-4">
+                          <label for="sexo" class="form-label">Seleccione Sexo</label>
+                          <select class="form-select" type="text" id="sexo" formControlName="sexo">
+                            <option value=1>M</option>
+                            <option value=2>F</option>
+                            <option value=3>Otros</option>
+                          </select>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-block estilos">
+                          <button type="submit" class="btn btn-primary">Actualizar</button>
+                          <button type="button" class="btn btn-secondary" (click)="regresar()">Regresar</button>
+                        </div>
+
+                    </form>
+                    
